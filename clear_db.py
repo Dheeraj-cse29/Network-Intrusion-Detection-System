@@ -1,0 +1,13 @@
+import sqlite3
+
+conn = sqlite3.connect("alerts.db")
+
+cursor = conn.cursor()
+
+cursor.execute("DELETE FROM alerts")
+
+conn.commit()
+
+conn.close()
+
+print("Database Cleared")
